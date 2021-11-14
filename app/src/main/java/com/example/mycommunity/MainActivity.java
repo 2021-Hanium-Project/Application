@@ -11,9 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         Button imageButton1 = (Button) findViewById(R.id.button1);
         Button imageButton2 = (Button) findViewById(R.id.button2);
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         Button imageButton7 = (Button) findViewById(R.id.reg_button3);
         Button imageButton8 = (Button) findViewById(R.id.reg_button4);
 
-        imageButton1.setOnClickListener(new View.OnClickListener() {
 
+        imageButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SubActivity.class);
@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         imageButton2.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SubActivity.class);
@@ -43,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         imageButton3.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SubActivity.class);
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         imageButton4.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SubActivity.class);
@@ -60,36 +57,30 @@ public class MainActivity extends AppCompatActivity {
         });
 
         imageButton5.setOnClickListener(new View.OnClickListener() {
-
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
+                startActivity(intent);
+            }
+        });imageButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
+                startActivity(intent);
+            }
+        });imageButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
+                startActivity(intent);
+            }
+        });imageButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SubActivity.class);
                 startActivity(intent);
             }
         });
-        imageButton6.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
-                startActivity(intent);
-            }
-        });
-        imageButton7.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
-                startActivity(intent);
-            }
-        });
-        imageButton8.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

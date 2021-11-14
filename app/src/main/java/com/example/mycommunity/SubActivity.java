@@ -15,9 +15,11 @@ public class SubActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list3);
         setContentView(R.layout.activity_list4);
 
+
         setContentView(R.layout.activity_register1);
         setContentView(R.layout.activity_register2);
         setContentView(R.layout.activity_register3);
         setContentView(R.layout.activity_register4);
+
     }
 }
