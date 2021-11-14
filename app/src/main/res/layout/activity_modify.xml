@@ -78,4 +78,46 @@
         tools:layout_editor_absoluteX="286dp"
         tools:layout_editor_absoluteY="230dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="305dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:text="변경할 비밀번호 입력"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <Button
+        android:id="@+id/modify_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00ff0000"
+        android:text="변경하기"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="286dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:background="#00ff0000"
+        android:textColor="@color/black"
+        android:text="변경 완료"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="441dp"
+        android:textSize="20dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
