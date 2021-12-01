@@ -132,6 +132,7 @@ public class recommendInitialFragment extends Fragment {
         }
 
 
+
         initial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

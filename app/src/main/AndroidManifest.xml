@@ -32,6 +32,9 @@
         <activity
             android:name=".ModifyPasswordPopUp"
             android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+        <activity
+            android:name=".fixPopUp"
+            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
     </application>
 
 </manifest>

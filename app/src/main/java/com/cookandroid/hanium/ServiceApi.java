@@ -44,4 +44,10 @@ public interface ServiceApi {
 
     @GET("user/modifyPassword")
     Call<HashMap<String, String>> modifyPassword(@Query("id") String id, @Query("currentPassword") String currentPassword,@Query("newPassword") String newPassword);
+
+    @GET("user/getFixList")
+    Call<HashMap<String, String>> getFixList(@Query("id") String id);
+
+    @POST("user/sendFix")
+    Call<HashMap<String, String>> sendFix(@Body FixData data);
 }

@@ -31,12 +31,16 @@ public class ChatRoomActivity extends AppCompatActivity {
     TextView chatroom;
     Button button;
     String myId,partnerId, chatroomName ,myNickname,partnerNickname;
+    SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatroom);
-        myNickname = "자두"; // 임시로 선언
+
+        sharedPreferences = getSharedPreferences("preferences",MODE_PRIVATE);
+        myNickname = sharedPreferences.getString("nickname","");
 
         recyclerView = findViewById(R.id.chatroom_recyclerview);
         editText = findViewById(R.id.chatRoom_EditText);

@@ -1,6 +1,7 @@
 package com.cookandroid.hanium;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment;
 public class bulletinFragment extends Fragment {
     Button free_btn, complain_btn, market_btn, fix_btn;
     MainActivity mainActivity;
+    String id;
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -35,6 +37,9 @@ public class bulletinFragment extends Fragment {
         fix_btn = v.findViewById(R.id.fix_btn);
 
         free_btn.setOnClickListener(onClickListener);
+        fix_btn.setOnClickListener(onClickListener);
+        Bundle bundle = getArguments();
+        id =bundle.getString("id");
 
 
         return v;
@@ -47,6 +52,10 @@ public class bulletinFragment extends Fragment {
                 case R.id.free_btn:
                     mainActivity.onClickFreeBulletinBtn();
                     break;
+                case R.id.fix_btn:
+                    Intent intent = new Intent(getContext(), fixPopUp.class);
+                    intent.putExtra("id",id);
+                    startActivity(intent);
 
             }
         }

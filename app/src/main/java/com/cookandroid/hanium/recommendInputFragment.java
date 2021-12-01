@@ -39,7 +39,7 @@ public class recommendInputFragment extends Fragment {
     private ServiceApi service;
     private String id, sex, dom, smoke, sleepHabit, food, sleepTime, numberOfCleaning, numberOfShower, title, desc;
     private List<String> arr = new ArrayList<>();
-    private boolean inputCheck = false;
+    private boolean inputCheck;
     MainActivity mainActivity;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
