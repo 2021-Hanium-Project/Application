@@ -1,16 +1,11 @@
 package com.cookandroid.hanium;
 
-import android.graphics.Paint;
-
-import com.google.gson.JsonArray;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -46,7 +41,7 @@ public interface ServiceApi {
     Call<HashMap<String, String>> modifyPassword(@Query("id") String id, @Query("currentPassword") String currentPassword,@Query("newPassword") String newPassword);
 
     @GET("user/getFixList")
-    Call<HashMap<String, String>> getFixList(@Query("id") String id);
+    Call<FixResponse> getFixList(@Query("id") String id);
 
     @POST("user/sendFix")
     Call<HashMap<String, String>> sendFix(@Body FixData data);

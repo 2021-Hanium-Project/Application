@@ -29,7 +29,7 @@ public class myPageFragment extends Fragment {
     TextView nicknameTV, idTV, emailTV, modifyPasswordBtn, fixApplyListBtn;
     String id;
     ListView fixApplyList;
-    ArrayList<String> fixArraylist;
+    ArrayList<String> fixArraylist = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,6 +57,19 @@ public class myPageFragment extends Fragment {
             }
         });
 
+        fixApplyListBtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               if(fixApplyList.getVisibility()==View.GONE){
+                    fixApplyList.setVisibility(View.VISIBLE);
+               }
+               else{
+                   fixApplyList.setVisibility(View.GONE);
+               }
+                }
+            }
+        );
+
         service.getMyInformation(id).enqueue(new Callback<HashMap<String, String>>() {
             @Override
             public void onResponse(Call<HashMap<String, String>> call, Response<HashMap<String, String>> response) {
@@ -76,26 +89,26 @@ public class myPageFragment extends Fragment {
             }
         });
 
-        service.getFixList(id).enqueue(new Callback<HashMap<String, String>>() {
+        service.getFixList(id).enqueue(new Callback<FixResponse>() {
             @Override
-            public void onResponse(Call<HashMap<String, String>> call, Response<HashMap<String, String>> response) {
-                HashMap<String, String> result = response.body();
-                Log.d("test",result.get("data"));
-                /*for(int i = 0 ; i<result.size(); i++) {
-                    fixArraylist.add(result.get(i));
-                    Log.d("test",result.get("data"));
-
-
+            public void onResponse(Call<FixResponse> call, Response<FixResponse> response) {
+                if (response.isSuccessful()) {
+                    if(response.body().getData() != null) {
+                        ArrayList<FixData> data = response.body().getData();
+                        fixArraylist.clear();
+                        for (int i = 0; i < data.size(); i++) {
+                            fixArraylist.add("내용 : " + data.get(i).getContent()+"\n날짜 : "+data.get(i).getDate());
+                        }
+                        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, fixArraylist);
+                        fixApplyList.setAdapter(adapter);
+                    }
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, fixArraylist);
-                fixApplyList.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
-               */
 
             }
 
+
             @Override
-            public void onFailure(Call<HashMap<String, String>> call, Throwable t) {
+            public void onFailure(Call<FixResponse> call, Throwable t) {
 
                 Log.e("회원가입 에러 발생", t.getMessage());
 

@@ -33,7 +33,7 @@ public class fixPopUp extends Activity {
     ServiceApi service;
     long mNow;
     Date mDate;
-    SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd");
+    SimpleDateFormat mFormat = new SimpleDateFormat("yyyy-MM-dd a HH:mm");
 
 
     @Override
