@@ -60,13 +60,14 @@ public class myPageFragment extends Fragment {
         fixApplyListBtn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               if(fixApplyList.getVisibility()==View.GONE){
-                    fixApplyList.setVisibility(View.VISIBLE);
-               }
-               else{
-                   fixApplyList.setVisibility(View.GONE);
-               }
-                }
+               if (fixApplyList.getCount()>0) {
+                   if (fixApplyList.getVisibility() == View.GONE) {
+                       fixApplyList.setVisibility(View.VISIBLE);
+                   } else {
+                       fixApplyList.setVisibility(View.GONE);
+                    }
+                 }
+            }
             }
         );
 
@@ -94,6 +95,8 @@ public class myPageFragment extends Fragment {
             public void onResponse(Call<FixResponse> call, Response<FixResponse> response) {
                 if (response.isSuccessful()) {
                     if(response.body().getData() != null) {
+
+
                         ArrayList<FixData> data = response.body().getData();
                         fixArraylist.clear();
                         for (int i = 0; i < data.size(); i++) {
