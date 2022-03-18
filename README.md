@@ -20,15 +20,15 @@
 ## Environment
 ### OS
 > 공통 : Windows 10\
-> Application : Android Version 10, linux 2 AMI
+> Application : Android Version 10, linux 2 AMI\
 > Web site : ubuntu 20.04
 
 ### 개발 환경(IDE)
 > IntelliJ , VScode, Android Studio
 
 ### 개발 언어
-> Application : Java
-> Web site : Java, html, css, mustache
-> Database : SQL
+> Application : Java\
+> Web site : Java, html, css, mustache\
+> Database : SQL\
 > Server : Nodejs
 
