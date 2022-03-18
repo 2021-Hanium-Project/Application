@@ -1,5 +1,5 @@
 # 슬기로운 긱사생활 사용자 전용 Application
-##기숙사 거주자에게 편리한 여러 기능을 제공하는 앱
+## 기숙사 거주자에게 편리한 여러 기능을 제공하는 앱
 #### Project nickname : seereal
 #### Project execution period : 2021.03~2021.11
 #### Project Hosting : [한이음](https://www.hanium.or.kr/portal/index.do)
