@@ -8,7 +8,7 @@
 슬기로운 긱사생활은 기숙사 내의 공지사항과 식단 알림, 룸메이트 추천서비스, 커뮤니티 및 고장수리 접수를 제공하는 기숙사 통합 관리 시스템입니다.
 
 
-|구분|기능|설명|
+|구분|기술|설명|
 |------|---|---|
 |H/W|AWS EC2|Linux/Ubuntu 클라우드 서버|
 |H/W|AWS RDS|데이터 베이스 운영 및 관리|
@@ -20,8 +20,7 @@
 ## Environment
 ### OS
 > 공통 : Windows 10\
-> Application : Android Version 10, linux 2 AMI\
-> Web site : ubuntu 20.04
+> Server linux 2 AMI(app), ubuntu 20.04(web)
 
 ### 개발 환경(IDE)
 > IntelliJ , VScode, Android Studio
