@@ -19,7 +19,7 @@
 
 ## Environment
 ### OS
-> 공통 : Windows 10
+> 공통 : Windows 10\
 > Application : Android Version 10, linux 2 AMI
 > Web site : ubuntu 20.04
 
